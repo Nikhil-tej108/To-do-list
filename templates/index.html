@@ -333,64 +333,6 @@
     </style>
 </head>
 <body>
-    <!-- <div class="header">
-        <h1><i class="fas fa-tasks"></i> Todo List</h1>
-        <a href="{{ url_for('logout') }}" class="logout-btn">
-            <i class="fas fa-sign-out-alt"></i>
-            Logout
-        </a>
-    </div>
-    <div class="container">
-        <div class="todo-input">
-            <input type="text" id="todoInput" placeholder="What needs to be done?">
-            <button onclick="addTodo()">
-                <i class="fas fa-plus"></i>
-                Add Task
-            </button>
-        </div>
-        <div class="todo-list" id="todoList">
-        </div>
-    </div>
-    <script>
-        function displayTodos(todos) {
-            const todoList = document.getElementById('todoList');
-            todoList.innerHTML = '';
-            
-            if (todos.length === 0) {
-                todoList.innerHTML = `
-                    <div class="empty-state">
-                        <i class="fas fa-clipboard-list"></i>
-                        <p>No tasks yet. Add one to get started!</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            todos.forEach(todo => {
-                const todoItem = document.createElement('div');
-                todoItem.className = `todo-item ${todo.completed ? 'completed' : ''}`;
-                todoItem.innerHTML = `
-                    <div class="todo-content">
-                        <span class="todo-text">${todo.title}</span>
-                        <span class="todo-time">
-                            <i class="far fa-clock"></i>
-                            ${todo.created_at}
-                        </span>
-                    </div>
-                    <div class="todo-actions">
-                        <button class="toggle" onclick="toggleTodo(${todo.id})">
-                            <i class="fas ${todo.completed ? 'fa-undo' : 'fa-check'}"></i>
-                            ${todo.completed ? 'Undo' : 'Complete'}
-                        </button>
-                        <button class="delete" onclick="deleteTodo(${todo.id})">
-                            <i class="fas fa-trash"></i>
-                            Delete
-                        </button>
-                    </div>
-                `;
-                todoList.appendChild(todoItem);
-            });
-        } -->
          <div class="header">
     <h1><i class="fas fa-tasks"></i> Todo List</h1>
     <a href="{{ url_for('logout') }}" class="logout-btn">
@@ -413,7 +355,7 @@
     <div class="todo-list" id="todoList">
       <!-- Todos will be rendered here -->
     </div>
-    </script>
+  </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html> 
